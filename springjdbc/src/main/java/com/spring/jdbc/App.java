@@ -1,5 +1,7 @@
 package com.spring.jdbc;
 
+import java.util.List;
+
 import org.springframework.context.ApplicationContext;
 
 import org.springframework.context.support.ClassPathXmlApplicationContext;
@@ -66,10 +68,17 @@ System.out.println("data changed"+ result);
 int result=studentDao.delete(17);
 System.out.println("deleted "+ result);
 */
+ 
+//rowmapper
+//Student student=studentDao.getStudent(10);
+//System.out.println(student);
 
-Student student=studentDao.getStudent(17);
-System.out.println(student);
 
+List<Student> students=studentDao.getAllStudents();
+for(Student s:students) {
+	System.out.println(s);
+
+}
     
     }
 }
