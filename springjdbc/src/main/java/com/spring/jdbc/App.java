@@ -29,13 +29,47 @@ public class App
       //  Object template=context.getBean("jdbcTemplate", JdbcTemplate.class);
         
 StudentDao studentDao =context.getBean("studentDao", StudentDao.class);
-    Student student=new Student();
-    student.setStudentName("abhishek");
-    student.setStudentId(07);
-    student.setStudentAddress("Raebareli");
+  
+/*
+Student student1=new Student();
+    Student student2=new Student();
+
+    student1.setStudentName("abhishek");
+    student1.setStudentId(17);
+    student1.setStudentAddress("Raebareli");
     
-    int result=studentDao.insert(student);
-    System.out.println("student added" + result);
+   int result1=studentDao.insert(student1);
+    
+    student2.setStudentName("gautam");
+    student2.setStudentId(10);
+    student2.setStudentAddress("Jaipur");
+    int result2=studentDao.insert(student2);
+
+    
+    
+    System.out.println("Student 1 added: " + result1);
+    System.out.println("Student 2 added: " + result2);
+    */
+/*
+//update
+Student student=new Student();
+student.setStudentId(07);
+student.setStudentName("bit");
+student.setStudentAddress("Lucknow");
+
+int  result= studentDao.change(student);
+System.out.println("data changed"+ result);
+*/
+
+//Delete
+/*
+int result=studentDao.delete(17);
+System.out.println("deleted "+ result);
+*/
+
+Student student=studentDao.getStudent(17);
+System.out.println(student);
+
     
     }
 }
