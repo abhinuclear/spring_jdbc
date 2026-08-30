@@ -59,7 +59,7 @@ student.setStudentAddress("Lucknow");
 
 int  result= studentDao.change(student);
 System.out.println("data changed"+ result);
-*/
+*/ 
 
 //Delete
 /*
